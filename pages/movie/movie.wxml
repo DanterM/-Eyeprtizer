@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<scroll-view class="page-body" scroll-y="true">
+  <view class='item' wx:for="{{movies}}">
+    <video class='video' src='{{item.data.playUrl}}' poster='{{item.data.cover.datail}}' page-gesture='true'></video>
+    <view>
+      <image class='author-icon' src='{{item.data.author.icon}}'></image>
+      <view class='video-info'>
+        <text class='title'>{{item.data.title}}</text>
+        <text class='category'>{{item.data.author.name}} / #{{item.data.category}}</text>
+      </view>
+    </view> 
+  </view>
+</scroll-view>
+

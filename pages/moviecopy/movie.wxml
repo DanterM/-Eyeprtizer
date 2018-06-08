@@ -1,0 +1,35 @@
+<!--pages/movie/movie.wxml-->
+<view class="swiper-tab">  
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">精选</view>  
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">广告</view>  
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">生活</view> 
+  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">动画</view> 
+  <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">全部分类</view>     
+</view>  
+
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="400" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item>  
+   <view>我是精选
+   </view>  
+  </swiper-item>
+  <swiper-item>  
+   <view>我是广告
+   <!-- <video src='http://baobab.kaiyanapp.com/api/v1/playUrl?vid=107816&resourceType=video&editionType=default&source=aliyun'></video>  -->
+   </view>  
+  </swiper-item>
+  <swiper-item>  
+   <view>我是生活
+   </view>  
+  </swiper-item>  
+  <swiper-item>  
+   <view>我是动画
+   </view>  
+  </swiper-item>
+  <swiper-item>  
+   <view>我是全部分类
+   <!-- <video src='http://baobab.kaiyanapp.com/api/v1/playUrl?vid=107816&resourceType=video&editionType=default&source=aliyun'></video>  -->
+   </view>  
+  </swiper-item> 
+</swiper>  
+

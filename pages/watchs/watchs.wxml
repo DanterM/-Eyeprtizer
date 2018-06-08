@@ -1,0 +1,24 @@
+<!--pages/watch/watchs.wxml-->
+<view wx:if="{{tab_config.fixed}}" class="tab-bar">
+    <view wx:for="{{tab_config.tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{tab_config.active_tab==index?'tab-active':''}} " style="width: {{tab_config.item_width}}px;">
+      <text>{{item}}</text>
+    </view>
+    <view style="width: {{tab_config.item_width-tab_config.underline.margins}}px; left: {{tab_config.underline.offset}}px;" class="under-line withAnimate"></view>
+  </view>
+  <scroll-view wx:else class="tab-bar" scroll-x="true" bindscroll="onScroll" style="width: 100%;" scroll-left="{{tab_config.tab_left}}">
+    <view wx:for="{{tab_config.tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{tab_config.active_tab==index?'tab-active':''}} " style="width: {{tab_config.item_width}}px;">
+      <text>{{item}}</text>
+    </view>
+    <view style="width: {{tab_config.item_width-tab_config.underline.margins}}px; left: {{tab_config.underline.offset+10}}px;" class="under-line withAnimate"></view>
+  </scroll-view>
+
+<!--  滑动页面  -->
+  <swiper class='swiper' bindchange='bindChange' current='{{swipe_config.current}}' indicator-dots='{{swipe_config.indicator_dots}}' autoplay='{{swipe_config.autoplay}}'>
+    <block wx:for="{{orderList}}" wx:for-item='orders'>
+      <swiper-item class='swiper-item'>
+         <!--  页面内容  -->
+         <text>asdfasdfasdf</text>
+         <video src='http://baobab.kaiyanapp.com/api/v1/playUrl?vid=107816&resourceType=video&editionType=default&source=aliyun'></video>  
+      </swiper-item>
+    </block>
+  </swiper>

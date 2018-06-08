@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/watchs/watchs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "开眼 Eyepetizer",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#f6f7f9",
+    "color": "#cdcdcd",
+    "selectedColor": "#2c2c2c",
+    "borderStyle": "white",
+    "list": [
+      {
+      "pagePath": "pages/movie/movie",
+      "text": "主页",
+      "color": "#cdcdcd",
+      "iconPath": "images/tabbar_home.png",
+      "selectedIconPath": "images/tabbar_home_actived.png"
+      },
+      {
+        "pagePath": "pages/watchs/watchs",
+        "text": "关注",
+        "iconPath": "images/tabbar_watch.png",
+        "selectedIconPath": "images/tabbar_watch_actived.png"
+      },
+      {
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "images/tabbar_user.png",
+      "selectedIconPath": "images/tabbar_user_actived.png"
+      }
+    ]
+  }
+}
